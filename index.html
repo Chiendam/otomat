@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Otomat đơn định</title>
+</head>
+
+<body>
+
+    <div style="text-align:center">
+        <h2>OTOMAT ĐƠN ĐỊNH</h2>
+        <p>Website kiểm tra xâu ký tự có được chấp nhận bởi otomat hay không</p>
+    </div>
+
+    <div class="container">
+        <label for="fname">* Dữ liệu đầu vào</label>
+        <hr>
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="listState">Tập các trạng thái: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="listState" name="listState" required placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="alphabet">Bảng chữ cái vào: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="alphabet" name="alphabet" required placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="startState">Trạng thái khởi đầu: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="startState" name="startState" required placeholder="Your name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="endState">Tập trạng thái kết thúc: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="endState" name="endState" required placeholder="Your last name..">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="changeState">Hàm chuyển trạng thái: </label>
+                </div>
+                <div class="col-75">
+                    <textarea id="changeState" name="changeState" required placeholder="Write something.."
+                        style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="stringCheck">Xâu kiểm tra: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="stringCheck" name="stringCheck" required placeholder="Your last name..">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input class="support" type="button" value="Sửa dụng dữ liệu mẫu">
+                <input class="reset" type="reset" value="Làm mới">
+                <input class="submit" type="button" value="Kiểm tra">
+            </div>
+        </form>
+        <label for="result">* Kết quả đầu ra</label>
+        <textarea id="result" name="result" readonly placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+
+</body>
+<script src="./handle.js"></script>
+
+</html>

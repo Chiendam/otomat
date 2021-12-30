@@ -1,9 +1,7 @@
 const $ = document.querySelector.bind(document);
-
 const btnSubmit = $('.submit');
 const btnReset = $('.reset');
-const btnSupport = $('.support');
-
+const btnDefaultData = $('.defaultData');
 let listState, startState, endState, changeState, stringCheck, alphabet;
 let result = '';
 let ChangeStateMes;
@@ -15,30 +13,23 @@ btnReset.onclick = (e) => {
     $('#result').value = '';
 }
 
-btnSupport.onclick = (e) => {
+btnDefaultData.onclick = (e) => {
     useDataSample();
 }
 
 btnSubmit.onclick = (e) => {
     getDataForm();
-
     $('#result').value = '';
     result = '';
-
     let check = validate([listState, alphabet, startState, endState, changeState, stringCheck])
     if(!check) {
         alert('Vui lòng nhập đầy đủ thông tin cho otomat!')
         return;
     }
-
     let otomat = formatInput(listState, alphabet, startState, endState, changeState, stringCheck);
-
     ChangeStateMes = formatToArray(changeState)
-
     checkString(otomat.stringCheck, otomat)
-
     $('#result').value = result;
-
 };
 
 
@@ -86,12 +77,10 @@ const handle = (state, arrayString, otomat) => {
 
 const formatInput = (listState, alphabet, startState, endState, changeState, stringCheck) => {
     let listChange = formatToArray(changeState)
-
     const newChangeState = listChange.map(el => {
         el = el.replace(/[\s()!y]/g, '');
         return el.replace(/[,=!y]/g, '-').split('-');
     });
-
     const newEndState = endState.replace(/[\s{}!y]/g, '').split(',');
     const newStringCheck = stringCheck.split('').reverse();
     return {
@@ -132,12 +121,3 @@ const getDataForm = () => {
     stringCheck = $('#stringCheck').value;
     alphabet = $('#alphabet').value;
 }
-
-// 0: (4) ['q0', '0', '{q0', 'q1}']
-// 1: (3) ['q0', '1', '{q0}']
-// 2: (3) ['q1', '1', 'q2']
-// 3: (3) ['q1', '1', 'q2']
-
-// arr.map(el => {
-//     al.fin
-// })

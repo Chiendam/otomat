@@ -28,7 +28,7 @@ input[type=button] {
     margin-left: 10px;
 }
 
-input[class=support] {
+input[class=defaultData] {
     background-color: #17a2b8;
     color: white;
     padding: 12px 20px;
@@ -57,7 +57,7 @@ input[type=reset]:hover {
     background-color: #0058b6;
 }
 
-input[class=support]:hover {
+input[class=defaultData]:hover {
     background-color: #0d8294;
 }
 
@@ -99,7 +99,7 @@ input[class=support]:hover {
         width: 100%;
         margin-top: 0;
     }
-    input[class=support] {
+    input[class=defaultData] {
         width: 100%;
         margin-top: 0;
     }

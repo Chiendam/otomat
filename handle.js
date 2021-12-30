@@ -105,12 +105,12 @@ const resetForm = (data) => {
 }
 
 const useDataSample = () => {
-    $('#listState').value = "{ q0, q1, q2, q3, q4, q5, q6, q7, q8, q9 }";
+    $('#listState').value = "{q0, q1, q2, q3, q4, q5, q6, q7, q8, q9}";
     $('#startState').value = "q0";
-    $('#endState').value = "{ q6, q9}";
-    $('#changeState').value = `(q0,6)=q1;\n(q1,3)=q2;\n(q2,7)=q3;\n(q3,9)=q4;\n(q4,0)=q5;\n(q5,5)=q6;\n(q6,H)=q7;\n(q7,V)=q8;\n(q8,N)=q9;`;
+    $('#endState').value = "{q6, q9}";
+    $('#changeState').value = `(q0, 6) = q1;\n(q1, 3) = q2;\n(q2, 7) = q3;\n(q3, 9) = q4;\n(q4, 0) = q5;\n(q5, 5) = q6;\n(q6, H) = q7;\n(q7, V) = q8;\n(q8, N) = q9;`;
     $('#stringCheck').value = "637905";
-    $('#alphabet').value = "{ 6, 3, 7, 9, 0, 5, H, V, N } ";
+    $('#alphabet').value = "{6, 3, 7, 9, 0, 5, H, V, N} ";
 }
 
 const getDataForm = () => {
